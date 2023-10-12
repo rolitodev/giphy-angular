@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://api.giphy.com/v1",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

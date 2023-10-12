@@ -1,0 +1,14 @@
+<h1 class="title">Busca un GIF</h1>
+<h4 class="subtitle is-4" *ngIf="counter.count > 0">Has encontrado un total de {{ counter.count || 0 }} gifs
+    relacionados de {{ (counter.total_count | number) || 0 }} gifs.</h4>
+
+<input class="input is-rounded" type="text" placeholder="Ingresa un parámetro para buscar un gif..."
+    [(ngModel)]="searchParams" (blur)="searchParamsChanges()">
+
+<div class="container-gifs">
+
+    <div class="column-gif" *ngFor="let gif of listOfGifs; let i = index;">
+        <img [src]="gif.url" [alt]="gif.title" title="GIF # {{i+1}} | {{ gif.title}}">
+    </div>
+
+</div>
